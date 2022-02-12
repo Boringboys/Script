@@ -39,14 +39,13 @@
         }
 
     }
-
+    var eventTimeOut;
     window.addEventListener('resize', function(){
         // 使用延时防止缩放代码被频繁执行
-        var eventTimeOut;
         if (eventTimeOut) {clearTimeout(eventTimeOut)}
         eventTimeOut = setTimeout(function(){
             console.log('页面大小已改变');
             detectAndChangeZoom();
-        }, 20);
+        }, 500);
     });
 })();
