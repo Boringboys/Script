@@ -5,6 +5,11 @@
 // @description  当存在水平滚动条时自动缩放页面到适合窗口宽度
 // @author       Boringboys
 // @match        https://blog.csdn.net/*
+// @match        https://www.bilibili.com/*
+// @match        https://www.zhihu.com/*
+// @match        https://baike.baidu.com/*
+// @match        https://www.google.com/*
+// @match        https://www.baidu.com/*
 // @icon         https://www.boringboys.top/images/mylogo.png
 // @grant        none
 // ==/UserScript==
@@ -35,13 +40,13 @@
 
     }
 
-    var eventTimeOut;
     window.addEventListener('resize', function(){
         // 使用延时防止缩放代码被频繁执行
+        var eventTimeOut;
         if (eventTimeOut) {clearTimeout(eventTimeOut)}
         eventTimeOut = setTimeout(function(){
             console.log('页面大小已改变');
             detectAndChangeZoom();
-        }, 500);
+        }, 20);
     });
 })();
