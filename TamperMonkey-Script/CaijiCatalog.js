@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         caijiCatalog
+// @name         CaijiCatalog
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  菜鸡小目录，扫描H标签，并生成一个目录，通过向目标H标签插入唯一属性值使用JS导航，很粗糙
@@ -12,7 +12,7 @@
 
 (function() {
     'use strict';
-    console.log('CaijiCatalog 正在执行...\n作者：Boringboys');
+    console.log('AuwavesTest 正在执行...\n作者：Boringboys');
 
     let firstElement = document.body.firstChild
     // console.log('第一个元素', firstElement);
@@ -104,7 +104,7 @@
             let miniListIndex = crypto.randomUUID();
             let tagName = t.nodeName;
             t.setAttribute('mini_list_index', miniListIndex);
-            line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"javascript:document.querySelector(`" + tagName + "[mini_list_index='" + miniListIndex + "']`).scrollIntoView()\" class=\"a_list\" style=\"text-decoration: none;color: rgb(197, 194, 194)\">" + t.textContent.replaceAll(" ", "") + "</a><br>\n";
+            line = get_indentattion(Number(t.nodeName[1])) + "<a href=\"javascript:document.querySelector(`" + tagName + "[mini_list_index='" + miniListIndex + "']`).scrollIntoView()\" class=\"a_list\" style=\"text-decoration: none;color: rgb(197, 194, 194)\">&#8727;&nbsp&nbsp" + t.textContent.replaceAll(" ", "") + "</a><br>\n";
             html += line;
         }
 
