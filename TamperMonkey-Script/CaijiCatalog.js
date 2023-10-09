@@ -12,7 +12,7 @@
 
 (function() {
     'use strict';
-    console.log('AuwavesTest 正在执行...\n作者：Boringboys');
+    console.log('CaijiCatalog 正在执行...\n作者：Boringboys');
 
     let firstElement = document.body.firstChild
     // console.log('第一个元素', firstElement);
