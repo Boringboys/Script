@@ -1,4 +1,4 @@
-你可以直接下载workflow文件导入
+你可以直接下载.workflow文件夹导入
 
 导入后可能需要在Shell下拉框处改成你电脑上的shell，我这里是 `/bin/zsh`
 
